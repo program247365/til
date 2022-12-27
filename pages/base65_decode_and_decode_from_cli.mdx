@@ -1,0 +1,23 @@
+---
+title: "Base64 Decode and Encode a String from the CLI on macOS"
+date: 2022-12-27
+tag: cli macos
+---
+
+For decoding:
+
+```zsh
+echo -n "bXkgc3RyaW5n" | base64 -D
+
+# output
+my string
+```
+
+For encoding just drop the flag:
+
+```zsh
+echo -n "my string" | base64
+
+# output
+bXkgc3RyaW5n
+```
