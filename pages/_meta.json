@@ -1,6 +1,9 @@
 {
   "index": {
-    "title": "Home"
+    "title": "Home",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "---": {
     "type": "separator"
