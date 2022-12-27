@@ -1,0 +1,14 @@
+{
+  "index": {
+    "title": "Home"
+  },
+  "---": {
+    "type": "separator"
+  },
+  "blog_link": {
+    "title": "Blog",
+    "type": "page",
+    "href": "https://kbr.sh",
+    "newWindow": true
+  }
+}
