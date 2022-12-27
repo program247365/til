@@ -1,0 +1,9 @@
+---
+title: "Search Homebrew on CLI Then Open All Results' Homepages"
+date: 2018-01-11
+tag: cli homebrew macos
+---
+
+```zsh
+brew cask search sql | xargs | tr " " "\n" | while read -r line; do brew cask home "$line"; done
+```

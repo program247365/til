@@ -1,0 +1,11 @@
+---
+title: "Rename All Files in a Directory Using ZSH on macOS"
+date: 2022-12-27
+tag: zsh cli
+---
+
+Ran into this when building this little site here. Wanted consistency, so figured this out with some Googling.
+
+```zsh
+for f in *; do mv "$f" "$f.tmp"; mv "$f.tmp" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done;
+```

@@ -1,0 +1,30 @@
+{
+  "name": "blog",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": ">=13",
+    "nextra": "^2.0.1",
+    "nextra-theme-docs": "^2.0.1",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "dependenciesMeta": {
+    "nextra": {
+      "injected": true
+    },
+    "nextra-theme-blog": {
+      "injected": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "typescript": "4.9.4"
+  }
+}

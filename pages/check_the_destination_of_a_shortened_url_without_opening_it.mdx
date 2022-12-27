@@ -1,0 +1,18 @@
+---
+title: "Check the Desitnation of a Shortned URL Without Opening It"
+date: 2018-01-11
+tag: curl cli
+---
+
+```zsh
+curl -sIL http://bit.ly/1aalcwX | grep 'Location: '
+```
+
+This oneliner will check the target location of any shortened URL, showing all the redirections in between. It's useful for getting the unshortened URL without opening the short link in the browser, and it also performs a HEAD request instead of a GET for more speed and a bit more privacy.
+
+Sample Output:
+
+```zsh
+Location: https://youtu.be/vw5uScet3A8
+Location: https://www.youtube.com/watch?v=vw5uScet3A8&feature=youtu.be
+```
