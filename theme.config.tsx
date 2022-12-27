@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
     };
   },
   project: {
-    link: "https://github.com/program247365/kbr-til",
+    link: "https://github.com/program247365/til",
   },
   toc: {
     float: true,
@@ -19,7 +19,7 @@ const config: DocsThemeConfig = {
   search: {
     placeholder: "Search Kevin's TILs...",
   },
-  docsRepositoryBase: "https://github.com/program247365/kbr-til/blob/main/",
+  docsRepositoryBase: "https://github.com/program247365/til/blob/main/",
   footer: {
     text: "Kevin B. Ridgway's Today I Learned Site",
   },
