@@ -10,6 +10,14 @@ const config: DocsThemeConfig = {
       titleTemplate: "%s – Kevin B. Ridgway's Today I Learned Site",
     };
   },
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta property="og:title" content="Kevin B. Ridgway's Today I Learned Site" />
+      <meta property="og:description" content="All of Kevin B. Ridgway's TILs in One Place"/>
+      <link rel="icon" href="/favicon.png" sizes="16x16" />
+    </>
+  ),
   project: {
     link: "https://github.com/program247365/til",
   },
