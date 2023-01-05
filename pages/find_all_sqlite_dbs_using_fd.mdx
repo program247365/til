@@ -1,0 +1,11 @@
+---
+title: "Find SQLite DBs on Your System using fd"
+date: 2022-01-05
+tag: cli fd
+---
+
+Using [fd](https://github.com/sharkdp/fd), I wanted to find all the sqlite databases that might exist on my system, and the command for that was:
+
+```zsh
+fd -t f sqlite /
+```
