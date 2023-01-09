@@ -1,0 +1,32 @@
+---
+title: "Create a Github Repo from the CLI"
+date: 2023-01-09
+tag: git github cli
+---
+
+I have used [GitHub CLI](https://cli.github.com/) for some time, but I was manually created repos using the web interface on Github.com, and then I was like, "Wait can't I do this quickly on the CLI??".
+
+Yup.
+
+When you're ready to push your local repo to a newly created one on github, you can run the command in the root of the project.
+
+Here's how, you run this command and it has a nice little wizard that it walks you through:
+
+```zsh
+gh repo create
+```
+
+The output looks like
+
+```zsh
+? What would you like to do? Push an existing local repository to GitHub
+? Path to local repository .
+? Repository name test
+? Repository owner program247365
+? Description A place to track all your side projects
+? Visibility Private
+✓ Created repository program247365/test on GitHub
+? Add a remote? Yes
+? What should the new remote be called? origin
+✓ Added remote https://github.com/program247365/test.git
+```
