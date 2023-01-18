@@ -1,0 +1,24 @@
+---
+title: "Installing Diesel CLI on macOS with SQLite Support Only"
+date: 2023-01-18
+tag: cli macos rustlang dieselorm sqlite tauri
+---
+
+I was creating [Tauri](https://tauri.app/) app and wante to use the [Diesel](https://docs.rs/diesel/latest/diesel/) crate for the Rust backend.
+
+Installing Diesel with the default `cargo install diesel_cli` tries to install everything. And diesel actually expects you to have the binary for the database you'll be using already installed.
+
+It gave me the error:
+
+```zsh
+...lots of clang output...
+  = note: ld: library not found for -lmysqlclient
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+...more output...
+```
+
+Which meant it was trying to install the mysqlclient binary which I didn't have or need. Using this invocation of the diesel CLI solved my problem:
+
+```zsh
+cargo install diesel_cli --no-default-features --features sqlite
+```
