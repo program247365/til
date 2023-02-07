@@ -1,0 +1,33 @@
+---
+title: "How to Create an ISO Image of macOS Ventura"
+date: "2023-02-07"
+tag: cli macos ventura
+---
+
+I needed to create a bootable ISO image of macOS to do some testing of desktop software and scripts on a clean
+ macOS install using VMWare Player. I knew you could do this, I just didn't know what the current steps were. Can you download this ISO image somewhere? How does it work?
+
+ After some searching I found this is the current way with macOS Ventura at least (YMMV if it's a different version):
+
+```
+# Creates Empty Disk:
+hdiutil create -o /tmp/Ventura -size 16384m -volname Ventura -layout SPUD -fs HFS+J
+
+# Mounts created disk:
+hdiutil attach /tmp/Ventura.dmg -noverify -mountpoint /Volumes/Ventura
+
+# Creates install media:
+sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia --volume /Volumes/Ventura --nointeraction
+
+# Unmounts disk image:
+hdiutil eject -force /Volumes/Install\ macOS\ Ventura
+
+# Creates CDR file:
+hdiutil convert /tmp/Ventura.dmg -format UDTO -o ~/Desktop/Ventura
+
+# Converts CDR to ISO:
+mv -v ~/Desktop/Ventura.cdr ~/Desktop/Ventura.iso
+
+# Cleans up files:
+rm -fv /tmp/Ventura.dmg
+```
