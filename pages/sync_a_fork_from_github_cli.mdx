@@ -1,0 +1,15 @@
+---
+title: "How to Sync a Fork Branch with Github CLI"
+date: "2023-04-05"
+tag: github, cli
+---
+
+I love the Github CLI, it makes a lot of things easier!
+
+One of my favorite ones is `sync` which I did not know about, but assumed it could do. Today I used it and it was wonderful:
+
+```
+gh repo sync owner/cli-fork -b BRANCH_NAME
+```
+
+And then you know your `upstream` repo is now synced down to your fork.
