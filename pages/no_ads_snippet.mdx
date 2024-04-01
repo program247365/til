@@ -1,0 +1,24 @@
+---
+title: "No Ads Snippet"
+date: "2024-04-02"
+tag: javascript ads console
+---
+
+Sometimes the simplest code is the best code. 
+
+I created this in 2017 originally as 
+a [CodePen named "The Best Blank Page Evar"](https://codepen.io/program247365/pen/bGZPRR), but I thought I'd document it here now.
+
+Example usage, IMDB.com often has very fullpage ads that run, and it's annoying since I'm usually just trying to look up who an actor is
+in something I'm watching, etc. But run this in the console of your browser, and watch that warlock disappear.
+
+```
+//Use this snippet in the console to destroy ads on any page :)
+
+var iframes = document.getElementsByTagName('iframe');
+for (var i = 0; i < iframes.length; i++) {
+  iframes[i].setAttribute("src", "");
+}
+```
+
+Note, there is probably some more clever HTML tags to target like `video`, might update this later.
