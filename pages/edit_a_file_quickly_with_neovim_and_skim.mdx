@@ -1,0 +1,19 @@
+---
+title: "Edit a File Quickly with NeoVim and skim a Fuzzy Finder"
+date: "2024-04-01"
+tag: neovim cli sk
+---
+
+I've switched to [NeoVim](https://neovim.io/) in recent years, and I'm always looking for ways to speed up my workflow.
+
+This command combines NeoVim with the [skim fuzzy finder](https://github.com/lotabout/skim) (written in Rust, obvs). You can swap out
+`sk` with `fzf` which you might already have installed.
+
+This allows you to quickly bring up all files in the directory with a fuzzy finder, and then when you press enter on one,
+it will open it in NeoVim.
+
+Hawt.
+
+```
+nvim $(sk)
+```
