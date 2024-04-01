@@ -1,0 +1,24 @@
+---
+title: "Capture A Single Frame from a HTML Video"
+date: "2024-04-03"
+tag: html video console javascript
+---
+
+This is amazing idea similar to my [No Ads Snippet](/no_ads_snippet). But this snippet you paste into the console of
+your browser will open a new window with the current frame you're paused on a video site (like YouTube – it works there!),
+and allow you you to then right-click and save that sweet frame of video.
+
+Hat tip to the awesome [Dave Rupert for the idea](https://daverupert.com/2022/11/html5-video-capture-frame-still/).
+
+This will come in useful.
+
+```
+const v = document.querySelector('video')
+let c = document.createElement('canvas')
+c.height = v.videoHeight || parseInt(v.style.height)
+c.width = v.videoWidth || parseInt(v.style.width)
+const ctx = c.getContext('2d')
+ctx.drawImage(v, 0, 0)
+const wnd = window.open('')
+wnd.document.write(`<img src="${c.toDataURL()}"/>`)
+```
