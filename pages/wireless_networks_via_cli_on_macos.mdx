@@ -4,13 +4,41 @@ date: "2024-04-01"
 tag: cli macos wireless networking
 ---
 
+I love quickly getting information via the CLI that I didn't know could before.
+
+It even shows you the channels that each WIFI network is using.
+
+Here's the command:
+
 ```
 /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
 ```
 
-I love quickly getting information via the CLI that I didn't know could before.
+The output will look something like this (SSIDs redacted with "---------------"):
 
-It even shows you the channels that each WIFI network is using.
+```
+                            SSID BSSID             RSSI CHANNEL HT CC SECURITY (auth/unicast/group)
+                 ---------------                   -90  116     Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -88  112     Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -82  9       Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -81  6       Y  -- RSN(PSK,FT-PSK/AES/AES) 
+                 ---------------                   -80  11      Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -76  1       Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -75  149     Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -73  161     Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -71  11      Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -70  1,+1    Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -70  11      Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -68  11      Y  -- WPA(PSK/AES,TKIP/TKIP) RSN(PSK/AES,TKIP/TKIP) 
+                 ---------------                   -48  1       Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -46  6       Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -60  36      Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -29  2,+1    Y  -- RSN(PSK/AES/AES)  
+                 ---------------                   -53  36      Y  -- RSN(PSK/AES/AES) 
+                 ---------------                   -52  157     Y  -- RSN(PSK/AES/AES) 
+```
+
+
 
 Why is that useful? Well...
 
