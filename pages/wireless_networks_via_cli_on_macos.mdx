@@ -1,0 +1,21 @@
+---
+title: "Wireless Networks via CLI on macOS"
+date: "2024-04-01"
+tag: cli macos wireless networking
+---
+
+```
+/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
+```
+
+I love quickly getting information via the CLI that I didn't know could before.
+
+It even shows you the channels that each WIFI network is using.
+
+Why is that useful? Well...
+
+> Overlapping channels in WiFi are not desirable because they can lead to interference and reduced performance. It is recommended to use non-overlapping 20 MHz channels, such as channels 1, 6, and 11 in the 2.4 GHz band, to optimize your network and avoid signal overlap. This practice helps minimize interference and ensures better WiFi performance. [^1] [^2] [^3]
+
+[^1]: https://www.ekahau.com/blog/channel-planning-best-practices-for-better-wi-fi/
+[^2]: https://www.metageek.com/training/resources/why-channels-1-6-11/
+[^3]: https://superuser.com/questions/443178/is-it-better-to-use-a-crowded-2-4ghz-wi-fi-channel-1-6-11-or-unused-3-4-8
